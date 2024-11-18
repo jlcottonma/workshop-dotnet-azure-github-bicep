@@ -4,7 +4,7 @@ param environment string
 targetScope = 'resourceGroup'
 
 var location = 'centralus'
-var myName = 'scottsauber'
+var myName = 'jlcottonma'
 var appNameWithEnvironment = 'workshop-dnazghbicep-${myName}-${environment}'
 
  module appService './appservice.bicep' = {
