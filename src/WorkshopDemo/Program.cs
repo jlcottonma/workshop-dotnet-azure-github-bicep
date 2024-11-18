@@ -21,6 +21,10 @@ builder.Configuration.AddAzureKeyVault(
         new Uri($"https://kv-jlcottonma-{builder.Environment.EnvironmentName}.vault.azure.net/"),
         new DefaultAzureCredential());
 
+// See my secrets
+Console.WriteLine($"My secret value is: {builder.Configuration.GetValue<string>("SomeSecret")}");
+Console.WriteLine($"My connection string value is: {builder.Configuration.GetConnectionString("MyApplication")}");
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
