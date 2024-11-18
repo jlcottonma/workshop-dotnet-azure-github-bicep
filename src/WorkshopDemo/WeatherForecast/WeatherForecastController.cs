@@ -12,7 +12,7 @@ public class WeatherForecastController(ILogger<WeatherForecastController> logger
         logger.LogInformation("Get WeatherForecast called");
         var summaries = new[]
         {
-            "Freezing"
+            "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
         };
         var forecasts =  Enumerable.Range(1, 5).Select(index =>
                 new WeatherForecast
